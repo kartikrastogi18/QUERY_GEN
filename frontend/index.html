@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI SQL Generator</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+    <div class="main-wrapper">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-database"></i>
+                <span>QueryGen</span>
+            </div>
+            <p class="subtitle">Turn natural language into complex SQL queries instantly.</p>
+        </header>
+
+        <main class="container">
+            <div class="input-section">
+                <label for="question">Describe your query</label>
+                <div class="textarea-wrapper">
+                    <textarea id="question" placeholder="e.g. Find all users who signed up last month and possess a premium subscription..."></textarea>
+                    <div class="focus-border"></div>
+                </div>
+                <button id="generateBtn">
+                    <span>Generate SQL</span>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </button>
+            </div>
+
+            <div class="output-section" id="outputSection" style="display: none;">
+                <div class="output-header">
+                    <span class="label">Generated SQL</span>
+                    <button class="copy-btn" id="copyBtn" title="Copy to clipboard">
+                        <i class="fa-regular fa-copy"></i>
+                        <span>Copy</span>
+                    </button>
+                </div>
+                <div class="code-block">
+                    <pre><code id="output"></code></pre>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Powered by AI • Designed for Developers</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
